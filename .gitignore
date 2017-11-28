@@ -37,3 +37,4 @@ Thumbs.db
 
 # debug files
 cmake-build-debug
+.idea
