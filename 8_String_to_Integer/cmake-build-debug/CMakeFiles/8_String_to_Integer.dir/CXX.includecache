@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/redrock/github/leetcode/8_String_to_Integer/Solution.cpp
+Solution.h
+/Users/redrock/github/leetcode/8_String_to_Integer/Solution.h
+
+/Users/redrock/github/leetcode/8_String_to_Integer/Solution.h
+string
+-
+
+/Users/redrock/github/leetcode/8_String_to_Integer/main.cpp
+iostream
+-
+Solution.h
+/Users/redrock/github/leetcode/8_String_to_Integer/Solution.h
+

@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/redrock/github/leetcode/8_String_to_Integer
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/redrock/github/leetcode/8_String_to_Integer/cmake-build-debug
