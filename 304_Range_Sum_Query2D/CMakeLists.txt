@@ -3,4 +3,6 @@ project(304_Range_Sum_Query2D)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(304_Range_Sum_Query2D main.cpp)
+add_executable(304_Range_Sum_Query2D
+        CMakeLists.txt
+        main.cpp)
