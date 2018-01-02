@@ -61,11 +61,23 @@ public:
     }
 
     void addEdge(int x, int y, weight w){
-        Edge *e = new Edge;
+        auto *e = new Edge;
         e->end = y;
         e->w = w;
         e->next = lists[x].head;
         lists[x].head = e;
+    }
+
+    LGraph* reverse(){
+        auto result = new LGraph(vn);
+        for (int i=0; i<vn; i++){
+            Edge *e = lists[i].head;
+            while (e != nullptr){
+                result->addEdge(e->end, i, e->w);
+                e = e->next;
+            }
+        }
+        return result;
     }
 
     ~LGraph(){
