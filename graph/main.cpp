@@ -29,6 +29,7 @@ void testCut(){
 }
  */
 
+/*
 #include "ConnectedComponent.h"
 
 void testStrongComponent(){
@@ -50,17 +51,24 @@ void testStrongComponent(){
     graph->addEdge(8,9,1);
     graph->addEdge(9,8,1);
 
-    /*
-    Korasaju(graph);
-    LGraph *graph = new LGraph(4);
-    graph->addEdge(0,1,1);
-    graph->addEdge(1,2,1);
-    graph->addEdge(2,0,1);
-     */
     Tarjan(graph);
+}
+*/
+
+#include "Flow.h"
+
+void testFlow(){
+    LGraph* graph = new LGraph(4);
+    graph->addEdge(0, 1, 999);
+    graph->addEdge(0, 2, 999);
+    graph->addEdge(1, 2, 1);
+    graph->addEdge(1, 3, 999);
+    graph->addEdge(2, 3, 999);
+    weight max = Dinic(graph, 0, 3);
+    cout << max << endl;
 }
 
 int main() {
-    testStrongComponent();
+    testFlow();
     return 0;
 }

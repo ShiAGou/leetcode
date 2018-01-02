@@ -41,6 +41,7 @@ struct Edge{
     int end;
     weight w;
     Edge *next = nullptr;
+    Edge *rev = nullptr;
 };
 
 struct Vertex{
@@ -60,12 +61,13 @@ public:
         }
     }
 
-    void addEdge(int x, int y, weight w){
+    Edge* addEdge(int x, int y, weight w){
         auto *e = new Edge;
         e->end = y;
         e->w = w;
         e->next = lists[x].head;
         lists[x].head = e;
+        return e;
     }
 
     LGraph* reverse(){
