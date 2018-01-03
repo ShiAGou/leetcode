@@ -87,4 +87,21 @@ public:
     }
 };
 
+
+class VGraph{
+public:
+    const int maxn = 1000;
+    int vn;
+    vector<int> edges[1000];
+
+    VGraph(int vn){
+        this->vn = vn;
+    }
+
+    void addEdge(int a1, int a2){
+        edges[a1].push_back(a2);
+    }
+
+};
+
 #endif //GRAPH_GRAPH_H

@@ -67,7 +67,7 @@ void Korasaju(LGraph* graph){
 
 void tarjan_dfs(int node, int &cur, int* rank, int* low, Vertex* lists, stack<int>* stck){
     rank[node] = cur;
-    low[node] = INT32_MAX;
+    low[node] = INT32_MAX;//有bug，应该设为cur
     stck->push(node);
     cur++;
     Edge* e = lists[node].head;

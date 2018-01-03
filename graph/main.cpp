@@ -53,7 +53,6 @@ void testStrongComponent(){
 
     Tarjan(graph);
 }
-*/
 
 #include "Flow.h"
 
@@ -68,7 +67,16 @@ void testFlow(){
     cout << max << endl;
 }
 
+*/
+
+#include "2SAT.h"
+
+void test2SAT(){
+    // wait to test ...
+
+}
+
 int main() {
-    testFlow();
+
     return 0;
 }
