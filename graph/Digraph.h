@@ -25,8 +25,14 @@ public:
         }
     }
 
-    void addEdge(int x, int y, weight w){
+    void addEdge(int x, int y, weight w=1){
         matrix[x][y] = w;
+    }
+
+    void addBiedge(int x, int y, weight w=1){
+        matrix[x][y] = w;
+        matrix[y][x] = w;
+
     }
 
     ~MGraph(){
@@ -93,13 +99,22 @@ public:
     const int maxn = 1000;
     int vn;
     vector<int> edges[1000];
+    vector<int> ws[1000];
 
     VGraph(int vn){
         this->vn = vn;
     }
 
-    void addEdge(int a1, int a2){
+    void addEdge(int a1, int a2, weight w=1){
         edges[a1].push_back(a2);
+        ws[a1].push_back(w);
+    }
+
+    void addBiedge(int a1, int a2, weight w=1){
+        edges[a1].push_back(a2);
+        ws[a1].push_back(w);
+        edges[a2].push_back(a1);
+        ws[a2].push_back(w);
     }
 
 };

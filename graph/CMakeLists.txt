@@ -3,4 +3,4 @@ project(graph)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(graph main.cpp Digraph.h Search.h Cut.h Undigraph.h ConnectedComponent.h Flow.h 2SAT.h)
+add_executable(graph main.cpp Digraph.h Search.h Cut.h Undigraph.h ConnectedComponent.h Flow.h 2SAT.h EulerCircuit.h HamiltonianPath.h MinimumSpanningTree.h)

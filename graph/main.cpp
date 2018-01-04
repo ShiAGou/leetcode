@@ -67,7 +67,6 @@ void testFlow(){
     cout << max << endl;
 }
 
-*/
 
 #include "2SAT.h"
 
@@ -76,7 +75,77 @@ void test2SAT(){
 
 }
 
-int main() {
+#include "EulerCircuit.h"
 
+void testEuler(){
+    VGraph* graph = new VGraph(7);
+    graph->addEdge(0,1);
+    graph->addEdge(0,6);
+    graph->addEdge(1,2);
+    graph->addEdge(2,0);
+    graph->addEdge(2,3);
+    graph->addEdge(3,4);
+    graph->addEdge(4,2);
+    graph->addEdge(4,5);
+    graph->addEdge(5,0);
+    graph->addEdge(6,4);
+    Hierholzer(graph);
+}
+
+#include "HamiltonianPath.h"
+
+void testHamCycle(){
+    MGraph* graph = new MGraph(4);
+    graph->addEdge(0,1);
+    graph->addEdge(1,0);
+    graph->addEdge(0,3);
+    graph->addEdge(3,0);
+    graph->addEdge(0,2);
+    graph->addEdge(2,0);
+    graph->addEdge(1,2);
+    graph->addEdge(2,1);
+    graph->addEdge(3,2);
+    graph->addEdge(2,3);
+
+    hamiltonianPath(graph);
+}
+*/
+
+#include "MinimumSpanningTree.h"
+
+void testMinSpanningTree(){
+    MGraph* graph = new MGraph(6);
+    graph->addBiedge(0,1,6);
+    graph->addBiedge(0,2,1);
+    graph->addBiedge(0,3,5);
+    graph->addBiedge(2,1,5);
+    graph->addBiedge(2,3,5);
+    graph->addBiedge(2,4,6);
+    graph->addBiedge(2,5,4);
+    graph->addBiedge(1,4,3);
+    graph->addBiedge(3,5,2);
+
+    Prim(graph);
+
+    cout << "----------------------" << endl;
+
+    VGraph* graph2 = new VGraph(7);
+    graph2->addBiedge(0,1,7);
+    graph2->addBiedge(0,3,5);
+    graph2->addBiedge(1,3,9);
+    graph2->addBiedge(1,2,8);
+    graph2->addBiedge(1,4,7);
+    graph2->addBiedge(2,4,5);
+    graph2->addBiedge(3,4,15);
+    graph2->addBiedge(3,5,6);
+    graph2->addBiedge(4,5,8);
+    graph2->addBiedge(5,6,11);
+    graph2->addBiedge(4,6,9);
+    Kruskal(graph2);
+
+}
+
+int main() {
+    testMinSpanningTree();
     return 0;
 }
