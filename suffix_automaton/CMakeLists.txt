@@ -3,4 +3,4 @@ project(suffix_automaton)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(suffix_automaton main.cpp SuffixAutomaton.cpp SuffixAutomaton.h)
+add_executable(suffix_automaton main.cpp SuffixAutomaton.cpp SuffixAutomaton.h KthSmallestSubstring.cpp)
