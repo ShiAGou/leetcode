@@ -109,7 +109,6 @@ void testHamCycle(){
 
     hamiltonianPath(graph);
 }
-*/
 
 #include "MinimumSpanningTree.h"
 
@@ -144,8 +143,11 @@ void testMinSpanningTree(){
     Kruskal(graph2);
 
 }
+*/
+
+#include "MinTreeGraph.h"
 
 int main() {
-    testMinSpanningTree();
+    test();
     return 0;
 }
